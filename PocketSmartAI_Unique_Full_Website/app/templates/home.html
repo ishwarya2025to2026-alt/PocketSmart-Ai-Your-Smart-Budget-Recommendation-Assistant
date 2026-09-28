@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}<section class="planner"><div class="planner-top"><p class="eyebrow">HOME INTERIOR PLANNER</p><h1>Design a room without losing the plot.</h1><p>Give us a few details. Your plan will be organized around the budget you enter.</p></div><form class="form-card" method="post" action="/generate-home" enctype="multipart/form-data">
+<label>Budget <span>₹</span><input name="budget" type="number" min="500" required placeholder="50000"></label>
+<label>Room type<select name="room"><option>Living Room</option><option>Bedroom</option><option>Kitchen</option><option>Dining Room</option></select></label>
+<label>Style<select name="style"><option>Modern</option><option>Minimal</option><option>Warm & Cozy</option><option>Contemporary</option></select></label>
+<label>What do you need?<textarea name="items" placeholder="Example: sofa, lights, curtains, storage"></textarea></label><button class="primary full">Generate my plan →</button></form></section>{% endblock %}

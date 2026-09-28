@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}<section class="planner"><div class="planner-top"><p class="eyebrow">JEWELRY BUDGET PLANNER</p><h1>Find pieces that belong with the occasion.</h1><p>Give us a few details. Your plan will be organized around the budget you enter.</p></div><form class="form-card" method="post" action="/generate-jewelry" enctype="multipart/form-data">
+<label>Budget <span>₹</span><input name="budget" type="number" min="500" required placeholder="15000"></label>
+<label>Occasion<select name="occasion"><option>Wedding</option><option>Engagement</option><option>Festival</option><option>Party</option><option>Formal Event</option></select></label>
+<label>Style<select name="style"><option>Elegant</option><option>Traditional</option><option>Minimal</option><option>Statement</option><option>Modern</option></select></label>
+<label>Outfit notes<textarea name="outfit" placeholder="Color, neckline, fabric or any styling preference"></textarea></label>
+<label>Optional outfit image<input name="image" type="file" accept="image/*"><small>Image is accepted for the planner flow; the demo fallback does not upload it anywhere.</small></label><button class="primary full">Generate my plan →</button></form></section>{% endblock %}

@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}<section class="planner"><div class="planner-top"><p class="eyebrow">PARTY BUDGET PLANNER</p><h1>Make the event memorable, not messy.</h1><p>Give us a few details. Your plan will be organized around the budget you enter.</p></div><form class="form-card" method="post" action="/generate-party" enctype="multipart/form-data">
+<label>Total budget <span>₹</span><input name="budget" type="number" min="1000" required placeholder="75000"></label>
+<label>Event type<select name="event"><option>Birthday</option><option>Wedding</option><option>Engagement</option><option>Corporate Event</option><option>Family Function</option></select></label>
+<label>Guest count<input name="guests" type="number" min="1" required placeholder="50"></label>
+<label>Venue preference<select name="venue"><option>Indoor</option><option>Outdoor</option><option>Hotel / Banquet</option><option>Home</option></select></label><button class="primary full">Generate my plan →</button></form></section>{% endblock %}
